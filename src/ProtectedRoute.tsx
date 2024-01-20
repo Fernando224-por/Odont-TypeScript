@@ -3,10 +3,11 @@ import { useAuthStore } from "./state"
 
 function ProtectedRoute() {
   const status = useAuthStore(store => store.loading)
+  const log = useAuthStore (store => store.status)
   if ( status === false) {
     return <div>loading ...</div>
   }
-  if ( !status ) {
+  if ( !status && log === "Unauthorized" ) {
     return <Navigate to='/'  replace/>  
   }
 
