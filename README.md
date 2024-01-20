@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# ODONT PROYECT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+:construction: Proyecto en construcción :construction:
 
-Currently, two official plugins are available:
+> [!NOTE]
+>Para poder contribuir en este proyecto debes tener instalado:
+>
+>[Node JS 20.8.1](https://nodejs.org/dist/v20.8.1/node-v20.8.1-x64.msi)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> [!CAUTION]
+> Por ningun motivo deben realizar un push a la Rama **MASTER**
+> esto debido a que es la rama que se enviara a producción
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Herramientas a Usar
+> Durante el desarrollo se utilizara:
+> + [React 18.2.0](https://react.dev/reference/react)
+> + [Axios 1.6.2](https://axios-http.com/docs/intro)
+> + [Zustand 4.4.7](https://docs.pmnd.rs/zustand/getting-started/introduction)
+> + [Vite 5.0.8](https://vitejs.dev/guide/)
+> + [Vitest 1.2.0](https://vitest.dev/guide/)
+> + [React Testing Library 14.1.2](https://testing-library.com/docs/)
