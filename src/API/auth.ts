@@ -1,8 +1,4 @@
 import axios from './axios.ts'
-
-export interface userLog{
-  email: string,
-  password: string
-}
+import { userLog } from '../interfaces/userLog.interface.ts'
 
 export const login = (user: userLog) => axios.post('/login', user)  

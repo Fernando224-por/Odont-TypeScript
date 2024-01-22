@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { useAuthStore } from "../../state"
 import '../../Styles/guestPages/loginPage.css'
+import { useEffect } from "react"
 type Inputs = {
   email: string,
   password: string
@@ -9,14 +10,20 @@ type Inputs = {
 function LoginPage() {
   const navigate = useNavigate()
   const loginUser = useAuthStore(state => state.loginUser)
+  const isAuthenticated = useAuthStore.getState().isAuthenticated
   const { register, handleSubmit, formState: {
     errors
   } } = useForm<Inputs>()
+  useEffect(() => {
+    if ( isAuthenticated === "Authorized" ) {
+      navigate('/Odont')
+    }
+  }, [isAuthenticated, navigate])
   const sendData = handleSubmit(async(data) => {
     console.log(data)
     try {
     await loginUser(data)
-    navigate('/dashboard')
+    navigate('/Odont')
     } catch (error) {
       console.error('No se pudo autenticar')
     }

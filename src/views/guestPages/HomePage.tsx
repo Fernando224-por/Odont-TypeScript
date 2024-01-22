@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import '../../Styles/guestPages/HomePage.css'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+
 function HomePage() {
   const [ activeSlide, setActiveSlide ] = useState(0)
   const handleSlideChange = (index: number) => {
@@ -36,6 +37,7 @@ function HomePage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod neque explicabo nisi praesentium facilis, repellendus maxime iste dignissimos, unde repellat repudiandae eos illo enim fugit odio aspernatur magnam minus.'
     }
   ]
+
   return (
     <div>
       <header>
