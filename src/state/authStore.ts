@@ -9,6 +9,7 @@ export interface authState {
   user?: User
 
   loginUser: (data: userLog) => Promise<void>
+  logOutUser: () => void
 }
 
 const storeAPI: StateCreator<authState> = (set) => ({
@@ -21,9 +22,12 @@ const storeAPI: StateCreator<authState> = (set) => ({
       set ({ isAuthenticated: "Authorized", loading: true, user: res.data  })
       console.log('logueado')
     } catch (error) {
-      set ({ isAuthenticated: "Unauthorized", loading: false, user: undefined, loginUser: undefined  })
+      set ({ isAuthenticated: "Unauthorized", loading: false, user: undefined  })
       console.log('No Logueado')
     }
+  },
+  logOutUser: () => {
+    set ({ isAuthenticated: "Unauthorized", loading: false, user: undefined  })
   }
 })
 
