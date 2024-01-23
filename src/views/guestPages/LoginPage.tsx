@@ -15,15 +15,15 @@ function LoginPage() {
     errors
   } } = useForm<Inputs>()
   useEffect(() => {
-    if ( isAuthenticated === "Authorized" ) {
-      navigate('/Odont')
+    if ( isAuthenticated  ) {
+      navigate('/Dashboard')
     }
   }, [isAuthenticated, navigate])
   const sendData = handleSubmit(async(data) => {
     console.log(data)
     try {
     await loginUser(data)
-    navigate('/Odont')
+    navigate('/Dashboard')
     } catch (error) {
       console.error('No se pudo autenticar')
     }

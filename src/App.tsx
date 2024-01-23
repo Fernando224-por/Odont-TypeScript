@@ -2,12 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./views/guestPages/HomePage"
 import LoginPage from "./views/guestPages/LoginPage"
 import ProtectedRoute from "./middleware/routes/ProtectedRoute"
-import RouteAdministrator from "./middleware/routes/RouteAdministrator"
-import RouteOdont from "./middleware/routes/RouteOdont"
-import RoutePatient from "./middleware/routes/RoutePatient"
-import Dasboard from "./views/auth/Admin/adminDasboard"
-import OdontDashboard from "./views/auth/Odont/odontDashboard"
-import PatientDashboard from "./views/auth/Patient/PatientDashboard"
+import Dashboard from "./views/auth/Dashboard"
 function App() {
   return (
     <BrowserRouter>
@@ -18,19 +13,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
 
         <Route element={<ProtectedRoute />}>
-
-          <Route element={<RouteAdministrator />}>
-            <Route path="/AdminRoute" element={<Dasboard />} />
-          </Route>
-
-          <Route element={<RouteOdont />}>
-            <Route path="/Odont" element={<OdontDashboard />} />
-          </Route>
-
-          <Route element={<RoutePatient />}>
-            <Route path="/Patient" element={<PatientDashboard />} />
-          </Route>
-
+          <Route path="/Dashboard" element={<Dashboard />} />
         </Route>
 
       </Routes>
