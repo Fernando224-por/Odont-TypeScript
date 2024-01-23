@@ -1,16 +1,18 @@
 import '../../styles/auth/Dashboard.css'
+import NavBarAuth from '../../components/navbarAuth'
 import { useAuthStore } from '../../state'
 const Dashboard = () => {
-  const name = useAuthStore.getState().user?.username
-  const role = useAuthStore.getState().user?.role
-  const closeSession = useAuthStore( state => state.logOutUser )
+const name = useAuthStore.getState().user?.username
   return (
-    <div>
-    <p className='text'>Hola</p>
-    <p className='text'>{name}</p>
-    <p className='text'>{role}</p>
-    <button onClick={closeSession} className='text' > Log Out </button>
-  </div>
+    <>
+      <div>
+        <NavBarAuth />
+      </div>
+      <div className='show-info'>
+          <p className='text'>Bienvenido { name } </p>
+      </div>
+    </>
+
   )
 }
 

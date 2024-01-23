@@ -1,0 +1,59 @@
+.disposition {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  transition: 0.7s ease;
+
+}
+
+.disposition .logo{
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.disposition .menu{
+  position: relative;
+}
+
+.disposition .menu .menu-items a{
+  position: relative;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-left: 35px;
+  color: #000;
+}
+
+.disposition .menu .menu-items a::before{
+  content: '';
+  position: absolute;
+  background: #000000;
+  opacity: 0.9;
+  width: 0;   
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.disposition .menu .menu-items a:hover::before{
+  width: 100%;
+}
+
+div .show-info {
+  margin-top: 8%;
+}
+
+div .text{
+  color: #000;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: center;
+}

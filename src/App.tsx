@@ -6,6 +6,7 @@ import Dashboard from "./views/auth/Dashboard"
 function App() {
   return (
     <BrowserRouter>
+    
 
       <Routes>
 
