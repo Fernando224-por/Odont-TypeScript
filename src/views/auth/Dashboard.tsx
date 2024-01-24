@@ -6,10 +6,7 @@ const name = useAuthStore.getState().user?.username
   return (
     <>
       <div>
-        <NavBarAuth />
-      </div>
-      <div className='show-info'>
-          <p className='text'>Bienvenido { name } </p>
+        <NavBarAuth useName={name} />
       </div>
     </>
 
