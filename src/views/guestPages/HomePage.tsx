@@ -39,7 +39,7 @@ function HomePage() {
   ]
 
   return (
-    <div>
+    <div className='text-color'>
       <header>
         <a href="#" className="logo">Odonto</a>
         <div className="navbar-btn"></div>

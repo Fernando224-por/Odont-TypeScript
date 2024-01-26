@@ -1,12 +1,13 @@
 import '../../styles/auth/Dashboard.css'
-import NavBarAuth from '../../components/navbarAuth'
+import NavBar from '../../components/NavBar'
 import { useAuthStore } from '../../state'
 const Dashboard = () => {
-const name = useAuthStore.getState().user?.username
+  const name = useAuthStore.getState().user?.username
   return (
     <>
+      <NavBar />
       <div>
-        <NavBarAuth useName={name} />
+        <p className='text'>Bienvenido { name }</p>
       </div>
     </>
 
