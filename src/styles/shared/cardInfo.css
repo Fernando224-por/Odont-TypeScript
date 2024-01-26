@@ -1,0 +1,44 @@
+.grid-disposition{
+  padding: 20px;
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  max-width: 100%;
+  padding: 70px;
+}
+
+.card-container {
+  background-color: #f0f0f0;
+  padding: 80px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Para pantallas medianas, mostrar dos columnas */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Para pantallas más grandes, mostrar tres columnas */
+@media screen and (min-width: 901px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
